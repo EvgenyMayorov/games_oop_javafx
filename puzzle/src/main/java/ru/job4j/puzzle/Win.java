@@ -15,14 +15,15 @@ public class Win {
 
     public static boolean monoVertical(int[][] board, int column) {
         boolean result = true;
-        for (int rowNumber = 0; rowNumber < board.length; rowNumber++) {
-            if (board[rowNumber][column] != 1) {
+        for (int[] ints : board) {
+            if (ints[column] != 1) {
                 result = false;
                 break;
             }
         }
         return result;
     }
+
     public static boolean check(int[][] board) {
         boolean result = false;
         for (int i = 0; i < board.length; i++) {
